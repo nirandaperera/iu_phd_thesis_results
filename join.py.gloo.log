@@ -1,0 +1,229 @@
+args:  {'script': ['join.py'], 'rows': [1000], 'world': [32, 64, 128, 256, 512], 'it': 10, 'sargs': '-u 0.9 -c gloo -a sort'}
+join.py rows 1000000000 world_size 32 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 32 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 1000000000 -i 10 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -u 0.9 -c gloo -a sort
+[BENCH] shuffle_l 2092 ms
+[BENCH] shuffle_r 2018 ms
+[BENCH] shuffle_t 4111 ms
+[BENCH] join 10527 ms
+[BENCH] shuffle_l 2147 ms
+[BENCH] shuffle_r 1987 ms
+[BENCH] shuffle_t 4134 ms
+[BENCH] join 11132 ms
+[BENCH] shuffle_l 2213 ms
+[BENCH] shuffle_r 2100 ms
+[BENCH] shuffle_t 4313 ms
+[BENCH] join 11172 ms
+[BENCH] shuffle_l 2312 ms
+[BENCH] shuffle_r 2041 ms
+[BENCH] shuffle_t 4354 ms
+[BENCH] join 11190 ms
+[BENCH] shuffle_l 2232 ms
+[BENCH] shuffle_r 2238 ms
+[BENCH] shuffle_t 4471 ms
+[BENCH] join 11112 ms
+[BENCH] shuffle_l 2054 ms
+[BENCH] shuffle_r 2611 ms
+[BENCH] shuffle_t 4666 ms
+[BENCH] join 11122 ms
+[BENCH] shuffle_l 2164 ms
+[BENCH] shuffle_r 2151 ms
+[BENCH] shuffle_t 4316 ms
+[BENCH] join 11128 ms
+[BENCH] shuffle_l 1990 ms
+[BENCH] shuffle_r 2364 ms
+[BENCH] shuffle_t 4354 ms
+[BENCH] join 11081 ms
+[BENCH] shuffle_l 2264 ms
+[BENCH] shuffle_r 2033 ms
+[BENCH] shuffle_t 4298 ms
+[BENCH] join 11181 ms
+[BENCH] shuffle_l 2210 ms
+[BENCH] shuffle_r 2526 ms
+[BENCH] shuffle_t 4737 ms
+[BENCH] join 11289 ms
+join DONE! {'rows': 1000000000, 'it': 10, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 1000000000 world_size 32 done!
+join.py rows 1000000000 world_size 64 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 64 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 1000000000 -i 10 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -u 0.9 -c gloo -a sort
+[BENCH] shuffle_l 1692 ms
+[BENCH] shuffle_r 1774 ms
+[BENCH] shuffle_t 3466 ms
+[BENCH] join 5183 ms
+[BENCH] shuffle_l 1740 ms
+[BENCH] shuffle_r 1794 ms
+[BENCH] shuffle_t 3534 ms
+[BENCH] join 5319 ms
+[BENCH] shuffle_l 1897 ms
+[BENCH] shuffle_r 1700 ms
+[BENCH] shuffle_t 3597 ms
+[BENCH] join 5452 ms
+[BENCH] shuffle_l 1632 ms
+[BENCH] shuffle_r 1889 ms
+[BENCH] shuffle_t 3522 ms
+[BENCH] join 5619 ms
+[BENCH] shuffle_l 1691 ms
+[BENCH] shuffle_r 1729 ms
+[BENCH] shuffle_t 3420 ms
+[BENCH] join 5445 ms
+[BENCH] shuffle_l 1692 ms
+[BENCH] shuffle_r 1676 ms
+[BENCH] shuffle_t 3369 ms
+[BENCH] join 5507 ms
+[BENCH] shuffle_l 1709 ms
+[BENCH] shuffle_r 1833 ms
+[BENCH] shuffle_t 3542 ms
+[BENCH] join 5511 ms
+[BENCH] shuffle_l 1644 ms
+[BENCH] shuffle_r 1850 ms
+[BENCH] shuffle_t 3494 ms
+[BENCH] join 5541 ms
+[BENCH] shuffle_l 1839 ms
+[BENCH] shuffle_r 1661 ms
+[BENCH] shuffle_t 3501 ms
+[BENCH] join 5513 ms
+[BENCH] shuffle_l 1722 ms
+[BENCH] shuffle_r 1788 ms
+[BENCH] shuffle_t 3510 ms
+[BENCH] join 5441 ms
+join DONE! {'rows': 1000000000, 'it': 10, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 1000000000 world_size 64 done!
+join.py rows 1000000000 world_size 128 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 128 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 1000000000 -i 10 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -u 0.9 -c gloo -a sort
+[BENCH] shuffle_l 1483 ms
+[BENCH] shuffle_r 2596 ms
+[BENCH] shuffle_t 4080 ms
+[BENCH] join 2579 ms
+[BENCH] shuffle_l 1434 ms
+[BENCH] shuffle_r 2040 ms
+[BENCH] shuffle_t 3474 ms
+[BENCH] join 2712 ms
+[BENCH] shuffle_l 1664 ms
+[BENCH] shuffle_r 2346 ms
+[BENCH] shuffle_t 4010 ms
+[BENCH] join 2661 ms
+[BENCH] shuffle_l 1548 ms
+[BENCH] shuffle_r 1602 ms
+[BENCH] shuffle_t 3150 ms
+[BENCH] join 2697 ms
+[BENCH] shuffle_l 1831 ms
+[BENCH] shuffle_r 1157 ms
+[BENCH] shuffle_t 2988 ms
+[BENCH] join 2722 ms
+[BENCH] shuffle_l 1558 ms
+[BENCH] shuffle_r 1968 ms
+[BENCH] shuffle_t 3527 ms
+[BENCH] join 2683 ms
+[BENCH] shuffle_l 1782 ms
+[BENCH] shuffle_r 1837 ms
+[BENCH] shuffle_t 3619 ms
+[BENCH] join 2717 ms
+[BENCH] shuffle_l 1786 ms
+[BENCH] shuffle_r 1591 ms
+[BENCH] shuffle_t 3377 ms
+[BENCH] join 2640 ms
+[BENCH] shuffle_l 1710 ms
+[BENCH] shuffle_r 3029 ms
+[BENCH] shuffle_t 4740 ms
+[BENCH] join 2736 ms
+[BENCH] shuffle_l 1606 ms
+[BENCH] shuffle_r 1732 ms
+[BENCH] shuffle_t 3339 ms
+[BENCH] join 2724 ms
+join DONE! {'rows': 1000000000, 'it': 10, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 1000000000 world_size 128 done!
+join.py rows 1000000000 world_size 256 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 256 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 1000000000 -i 10 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -u 0.9 -c gloo -a sort
+[BENCH] shuffle_l 2069 ms
+[BENCH] shuffle_r 2433 ms
+[BENCH] shuffle_t 4503 ms
+[BENCH] join 1254 ms
+[BENCH] shuffle_l 2053 ms
+[BENCH] shuffle_r 2263 ms
+[BENCH] shuffle_t 4317 ms
+[BENCH] join 1344 ms
+[BENCH] shuffle_l 1857 ms
+[BENCH] shuffle_r 2535 ms
+[BENCH] shuffle_t 4393 ms
+[BENCH] join 1280 ms
+[BENCH] shuffle_l 1936 ms
+[BENCH] shuffle_r 2824 ms
+[BENCH] shuffle_t 4761 ms
+[BENCH] join 1285 ms
+[BENCH] shuffle_l 1495 ms
+[BENCH] shuffle_r 1913 ms
+[BENCH] shuffle_t 3408 ms
+[BENCH] join 1274 ms
+[BENCH] shuffle_l 2113 ms
+[BENCH] shuffle_r 1805 ms
+[BENCH] shuffle_t 3919 ms
+[BENCH] join 1283 ms
+[BENCH] shuffle_l 1386 ms
+[BENCH] shuffle_r 2230 ms
+[BENCH] shuffle_t 3617 ms
+[BENCH] join 1310 ms
+[BENCH] shuffle_l 1397 ms
+[BENCH] shuffle_r 2173 ms
+[BENCH] shuffle_t 3571 ms
+[BENCH] join 1346 ms
+[BENCH] shuffle_l 1423 ms
+[BENCH] shuffle_r 2772 ms
+[BENCH] shuffle_t 4196 ms
+[BENCH] join 1299 ms
+[BENCH] shuffle_l 1581 ms
+[BENCH] shuffle_r 2669 ms
+[BENCH] shuffle_t 4250 ms
+[BENCH] join 1285 ms
+join DONE! {'rows': 1000000000, 'it': 10, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 1000000000 world_size 256 done!
+join.py rows 1000000000 world_size 512 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 512 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 1000000000 -i 10 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -u 0.9 -c gloo -a sort
+[BENCH] shuffle_l 2074 ms
+[BENCH] shuffle_r 8864 ms
+[BENCH] shuffle_t 10939 ms
+[BENCH] join 734 ms
+[BENCH] shuffle_l 1464 ms
+[BENCH] shuffle_r 10290 ms
+[BENCH] shuffle_t 11755 ms
+[BENCH] join 741 ms
+[BENCH] shuffle_l 1786 ms
+[BENCH] shuffle_r 2046 ms
+[BENCH] shuffle_t 3833 ms
+[BENCH] join 760 ms
+[BENCH] shuffle_l 1567 ms
+[BENCH] shuffle_r 2320 ms
+[BENCH] shuffle_t 3887 ms
+[BENCH] join 766 ms
+[BENCH] shuffle_l 1690 ms
+[BENCH] shuffle_r 2041 ms
+[BENCH] shuffle_t 3732 ms
+[BENCH] join 742 ms
+[BENCH] shuffle_l 2280 ms
+[BENCH] shuffle_r 1558 ms
+[BENCH] shuffle_t 3838 ms
+[BENCH] join 721 ms
+[BENCH] shuffle_l 1548 ms
+[BENCH] shuffle_r 2055 ms
+[BENCH] shuffle_t 3603 ms
+[BENCH] join 760 ms
+[BENCH] shuffle_l 2050 ms
+[BENCH] shuffle_r 1689 ms
+[BENCH] shuffle_t 3739 ms
+[BENCH] join 766 ms
+[BENCH] shuffle_l 1966 ms
+[BENCH] shuffle_r 1896 ms
+[BENCH] shuffle_t 3862 ms
+[BENCH] join 745 ms
+[BENCH] shuffle_l 1624 ms
+[BENCH] shuffle_r 2342 ms
+[BENCH] shuffle_t 3966 ms
+[BENCH] join 712 ms
+join DONE! {'rows': 1000000000, 'it': 10, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 1000000000 world_size 512 done!
+join.py done!
+ ====================================== 
+
