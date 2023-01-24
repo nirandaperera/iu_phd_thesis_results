@@ -1262,7 +1262,8 @@
 \pgfpathlineto{\pgfqpoint{3.530505in}{1.494662in}}%
 \pgfpathlineto{\pgfqpoint{4.031515in}{1.055218in}}%
 \pgfpathlineto{\pgfqpoint{4.532525in}{0.696000in}}%
-\pgfpathmoveto{\pgfqpoint{5.534545in}{0.830629in}}%
+\pgfpathlineto{\pgfqpoint{5.033535in}{0.715664in}}%
+\pgfpathlineto{\pgfqpoint{5.534545in}{0.830629in}}%
 \pgfusepath{stroke}%
 \end{pgfscope}%
 \begin{pgfscope}%
@@ -1315,6 +1316,10 @@
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsys@transformshift{4.532525in}{0.696000in}%
+\pgfsys@useobject{currentmarker}{}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsys@transformshift{5.033535in}{0.715664in}%
 \pgfsys@useobject{currentmarker}{}%
 \end{pgfscope}%
 \begin{pgfscope}%
