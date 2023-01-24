@@ -1,0 +1,74 @@
+args:  {'rows': [25], 'world': [32, 64, 128, 256, 512], 'weak': True, 'op': True}
+rows 25000000 world_size 32 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 32 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 25000000 0.9
+### o 0 32 25000000 7416 27771219
+### o 1 32 25000000 7616 27771219
+### o 2 32 25000000 7067 27771219
+### o 3 32 25000000 7638 27771219
+### o 4 32 25000000 7165 27771219
+### o 5 32 25000000 7299 27771219
+### o 6 32 25000000 7256 27771219
+### o 7 32 25000000 7526 27771219
+### o 8 32 25000000 7427 27771219
+### o 9 32 25000000 7173 27771219
+
+rows 25000000 world_size 32 done!
+rows 25000000 world_size 64 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 64 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 25000000 0.9
+### o 0 64 25000000 8654 27787580
+### o 1 64 25000000 8495 27787580
+### o 2 64 25000000 8745 27787580
+### o 3 64 25000000 8186 27787580
+### o 4 64 25000000 8510 27787580
+### o 5 64 25000000 8216 27787580
+### o 6 64 25000000 8140 27787580
+### o 7 64 25000000 8130 27787580
+### o 8 64 25000000 8171 27787580
+### o 9 64 25000000 8080 27787580
+
+rows 25000000 world_size 64 done!
+rows 25000000 world_size 128 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 128 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 25000000 0.9
+### o 0 128 25000000 10174 27785026
+### o 1 128 25000000 10520 27785026
+### o 2 128 25000000 10434 27785026
+### o 3 128 25000000 10587 27785026
+### o 4 128 25000000 10395 27785026
+### o 5 128 25000000 10622 27785026
+### o 6 128 25000000 10441 27785026
+### o 7 128 25000000 10487 27785026
+### o 8 128 25000000 10477 27785026
+### o 9 128 25000000 10155 27785026
+
+rows 25000000 world_size 128 done!
+rows 25000000 world_size 256 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 256 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 25000000 0.9
+### o 0 256 25000000 13498 27771765
+### o 1 256 25000000 14390 27771765
+### o 2 256 25000000 14200 27771765
+### o 3 256 25000000 13844 27771765
+### o 4 256 25000000 13816 27771765
+### o 5 256 25000000 13787 27771765
+### o 6 256 25000000 13775 27771765
+### o 7 256 25000000 14170 27771765
+### o 8 256 25000000 13101 27771765
+### o 9 256 25000000 13765 27771765
+
+rows 25000000 world_size 256 done!
+rows 25000000 world_size 512 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 512 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 25000000 0.9
+### o 0 512 25000000 22636 27775467
+### o 1 512 25000000 25024 27775467
+### o 2 512 25000000 26068 27775467
+### o 3 512 25000000 24930 27775467
+### o 4 512 25000000 25472 27775467
+### o 5 512 25000000 25113 27775467
+### o 6 512 25000000 25552 27775467
+### o 7 512 25000000 24348 27775467
+### o 8 512 25000000 25940 27775467
+### o 9 512 25000000 25961 27775467
+
+rows 25000000 world_size 512 done!
+done!
+ ====================================== 
+

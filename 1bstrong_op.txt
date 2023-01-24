@@ -1,0 +1,100 @@
+args:  {'rows': [1000], 'world': [32, 64, 128, 256, 512], 'weak': False, 'op': True}
+rows 1000000000 world_size 32 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 32 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 31250000 0.9
+### o 0 32 31250000 10064 34716103
+### o 1 32 31250000 9821 34716103
+### o 2 32 31250000 10720 34716103
+### o 3 32 31250000 9966 34716103
+### o 4 32 31250000 10444 34716103
+### o 5 32 31250000 10316 34716103
+### o 6 32 31250000 10299 34716103
+### o 7 32 31250000 9839 34716103
+### o 8 32 31250000 10294 34716103
+### o 9 32 31250000 9703 34716103
+
+rows 1000000000 world_size 32 done!
+rows 1000000000 world_size 64 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 64 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 15625000 0.9
+### o 0 64 15625000 5437 17358584
+### o 1 64 15625000 5340 17358584
+### o 2 64 15625000 5599 17358584
+### o 3 64 15625000 5417 17358584
+### o 4 64 15625000 5560 17358584
+### o 5 64 15625000 5474 17358584
+### o 6 64 15625000 5401 17358584
+### o 7 64 15625000 5410 17358584
+### o 8 64 15625000 5459 17358584
+### o 9 64 15625000 5295 17358584
+
+rows 1000000000 world_size 64 done!
+rows 1000000000 world_size 128 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 128 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 7812500 0.9
+### o 0 128 7812500 3127 8672646
+### o 1 128 7812500 3181 8672646
+### o 2 128 7812500 3195 8672646
+### o 3 128 7812500 3136 8672646
+### o 4 128 7812500 3218 8672646
+### o 5 128 7812500 3247 8672646
+### o 6 128 7812500 3068 8672646
+### o 7 128 7812500 3270 8672646
+### o 8 128 7812500 3100 8672646
+### o 9 128 7812500 3095 8672646
+
+rows 1000000000 world_size 128 done!
+rows 1000000000 world_size 256 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 256 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 3906250 0.9
+### o 0 256 3906250 2432 4342381
+### o 1 256 3906250 2927 4342381
+### o 2 256 3906250 2550 4342381
+### o 3 256 3906250 3293 4342381
+### o 4 256 3906250 2839 4342381
+### o 5 256 3906250 3297 4342381
+### o 6 256 3906250 2694 4342381
+### o 7 256 3906250 3213 4342381
+### o 8 256 3906250 2623 4342381
+### o 9 256 3906250 2949 4342381
+
+rows 1000000000 world_size 256 done!
+rows 1000000000 world_size 512 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 512 /N/u/d/dnperera/victor/git/cylon/build/bin/join_example m o 1953125 0.9
+
+Failed:
+ssh_exchange_identification: Connection closed by remote host
+--------------------------------------------------------------------------
+ORTE was unable to reliably start one or more daemons.
+This usually is caused by:
+
+* not finding the required libraries and/or binaries on
+  one or more nodes. Please check your PATH and LD_LIBRARY_PATH
+  settings, or configure OMPI with --enable-orterun-prefix-by-default
+
+* lack of authority to execute on one or more specified nodes.
+  Please verify your allocation and authorities.
+
+* the inability to write startup files into /tmp (--tmpdir/orte_tmpdir_base).
+  Please check with your sys admin to determine the correct location to use.
+
+*  compilation of the orted with dynamic libraries when static are required
+  (e.g., on Cray). Please check your configure cmd line and consider using
+  one of the contrib/platform definitions for your system type.
+
+* an inability to create a connection back to mpirun due to a
+  lack of common network interfaces and/or no route found between
+  them. Please check network connectivity (including firewalls
+  and network routing requirements).
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+ORTE does not know how to route a message to the specified daemon
+located on the indicated node:
+
+  my node:   v-001
+  target node:  v-002
+
+This is usually an internal programming error that should be
+reported to the developers. In the meantime, a workaround may
+be to set the MCA param routed=direct on the command line or
+in your environment. We apologize for the problem.
+--------------------------------------------------------------------------
+[v-001:23324] 12 more processes have sent help message help-errmgr-base.txt / no-path
+[v-001:23324] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+

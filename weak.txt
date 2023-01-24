@@ -1,0 +1,441 @@
+args:  {'script': ['join.py'], 'rows': [5], 'world': [32, 64, 128, 256, 512], 'it': 6, 'sargs': '-a sort -c mpi -u 0.9', 'weak': True}
+join.py rows 5000000 world_size 32 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 32 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c mpi -u 0.9 --weak
+[BENCH] shuffle_l 220 ms
+[BENCH] shuffle_r 235 ms
+[BENCH] shuffle_t 456 ms
+[BENCH] join 1396 ms
+[BENCH] shuffle_l 144 ms
+[BENCH] shuffle_r 132 ms
+[BENCH] shuffle_t 276 ms
+[BENCH] join 1438 ms
+[BENCH] shuffle_l 150 ms
+[BENCH] shuffle_r 129 ms
+[BENCH] shuffle_t 280 ms
+[BENCH] join 1472 ms
+[BENCH] shuffle_l 168 ms
+[BENCH] shuffle_r 180 ms
+[BENCH] shuffle_t 349 ms
+[BENCH] join 1529 ms
+[BENCH] shuffle_l 161 ms
+[BENCH] shuffle_r 144 ms
+[BENCH] shuffle_t 306 ms
+[BENCH] join 1529 ms
+[BENCH] shuffle_l 159 ms
+[BENCH] shuffle_r 134 ms
+[BENCH] shuffle_t 294 ms
+[BENCH] join 1493 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['mpi'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'mpi', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 32 done!
+join.py rows 5000000 world_size 64 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 64 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c mpi -u 0.9 --weak
+[BENCH] shuffle_l 349 ms
+[BENCH] shuffle_r 286 ms
+[BENCH] shuffle_t 635 ms
+[BENCH] join 1483 ms
+[BENCH] shuffle_l 319 ms
+[BENCH] shuffle_r 265 ms
+[BENCH] shuffle_t 585 ms
+[BENCH] join 1510 ms
+[BENCH] shuffle_l 292 ms
+[BENCH] shuffle_r 265 ms
+[BENCH] shuffle_t 557 ms
+[BENCH] join 1498 ms
+[BENCH] shuffle_l 344 ms
+[BENCH] shuffle_r 287 ms
+[BENCH] shuffle_t 632 ms
+[BENCH] join 1536 ms
+[BENCH] shuffle_l 312 ms
+[BENCH] shuffle_r 342 ms
+[BENCH] shuffle_t 655 ms
+[BENCH] join 1519 ms
+[BENCH] shuffle_l 323 ms
+[BENCH] shuffle_r 315 ms
+[BENCH] shuffle_t 638 ms
+[BENCH] join 1593 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['mpi'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'mpi', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 64 done!
+join.py rows 5000000 world_size 128 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 128 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c mpi -u 0.9 --weak
+[BENCH] shuffle_l 471 ms
+[BENCH] shuffle_r 413 ms
+[BENCH] shuffle_t 885 ms
+[BENCH] join 1547 ms
+[BENCH] shuffle_l 582 ms
+[BENCH] shuffle_r 465 ms
+[BENCH] shuffle_t 1048 ms
+[BENCH] join 1514 ms
+[BENCH] shuffle_l 617 ms
+[BENCH] shuffle_r 590 ms
+[BENCH] shuffle_t 1207 ms
+[BENCH] join 1569 ms
+[BENCH] shuffle_l 539 ms
+[BENCH] shuffle_r 635 ms
+[BENCH] shuffle_t 1175 ms
+[BENCH] join 1567 ms
+[BENCH] shuffle_l 557 ms
+[BENCH] shuffle_r 602 ms
+[BENCH] shuffle_t 1160 ms
+[BENCH] join 1570 ms
+[BENCH] shuffle_l 546 ms
+[BENCH] shuffle_r 605 ms
+[BENCH] shuffle_t 1152 ms
+[BENCH] join 1534 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['mpi'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'mpi', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 128 done!
+join.py rows 5000000 world_size 256 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 256 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c mpi -u 0.9 --weak
+[BENCH] shuffle_l 812 ms
+[BENCH] shuffle_r 1095 ms
+[BENCH] shuffle_t 1908 ms
+[BENCH] join 1599 ms
+[BENCH] shuffle_l 1503 ms
+[BENCH] shuffle_r 1384 ms
+[BENCH] shuffle_t 2888 ms
+[BENCH] join 1594 ms
+[BENCH] shuffle_l 1546 ms
+[BENCH] shuffle_r 1343 ms
+[BENCH] shuffle_t 2890 ms
+[BENCH] join 1557 ms
+[BENCH] shuffle_l 1499 ms
+[BENCH] shuffle_r 1384 ms
+[BENCH] shuffle_t 2883 ms
+[BENCH] join 1560 ms
+[BENCH] shuffle_l 1407 ms
+[BENCH] shuffle_r 1323 ms
+[BENCH] shuffle_t 2730 ms
+[BENCH] join 1572 ms
+[BENCH] shuffle_l 1407 ms
+[BENCH] shuffle_r 1250 ms
+[BENCH] shuffle_t 2657 ms
+[BENCH] join 1618 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['mpi'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'mpi', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 256 done!
+join.py rows 5000000 world_size 512 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 512 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c mpi -u 0.9 --weak
+[BENCH] shuffle_l 2034 ms
+[BENCH] shuffle_r 4155 ms
+[BENCH] shuffle_t 6190 ms
+[BENCH] join 1950 ms
+[BENCH] shuffle_l 3865 ms
+[BENCH] shuffle_r 4003 ms
+[BENCH] shuffle_t 7868 ms
+[BENCH] join 1877 ms
+[BENCH] shuffle_l 3858 ms
+[BENCH] shuffle_r 3993 ms
+[BENCH] shuffle_t 7852 ms
+[BENCH] join 1870 ms
+[BENCH] shuffle_l 3946 ms
+[BENCH] shuffle_r 3662 ms
+[BENCH] shuffle_t 7608 ms
+[BENCH] join 1896 ms
+[BENCH] shuffle_l 3767 ms
+[BENCH] shuffle_r 3607 ms
+[BENCH] shuffle_t 7375 ms
+[BENCH] join 1911 ms
+[BENCH] shuffle_l 3993 ms
+[BENCH] shuffle_r 3343 ms
+[BENCH] shuffle_t 7337 ms
+[BENCH] join 1952 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['mpi'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'mpi', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 512 done!
+join.py done!
+ ====================================== 
+
+args:  {'script': ['join.py'], 'rows': [5], 'world': [32, 64, 128, 256, 512], 'it': 6, 'sargs': '-a sort -c gloo -u 0.9', 'weak': True}
+join.py rows 5000000 world_size 32 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 32 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c gloo -u 0.9 --weak
+[BENCH] shuffle_l 724 ms
+[BENCH] shuffle_r 747 ms
+[BENCH] shuffle_t 1471 ms
+[BENCH] join 1460 ms
+[BENCH] shuffle_l 689 ms
+[BENCH] shuffle_r 605 ms
+[BENCH] shuffle_t 1294 ms
+[BENCH] join 1503 ms
+[BENCH] shuffle_l 715 ms
+[BENCH] shuffle_r 768 ms
+[BENCH] shuffle_t 1484 ms
+[BENCH] join 1485 ms
+[BENCH] shuffle_l 1768 ms
+[BENCH] shuffle_r 533 ms
+[BENCH] shuffle_t 2301 ms
+[BENCH] join 1494 ms
+[BENCH] shuffle_l 595 ms
+[BENCH] shuffle_r 1027 ms
+[BENCH] shuffle_t 1622 ms
+[BENCH] join 1524 ms
+[BENCH] shuffle_l 666 ms
+[BENCH] shuffle_r 654 ms
+[BENCH] shuffle_t 1321 ms
+[BENCH] join 1485 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 32 done!
+join.py rows 5000000 world_size 64 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 64 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c gloo -u 0.9 --weak
+[BENCH] shuffle_l 1174 ms
+[BENCH] shuffle_r 789 ms
+[BENCH] shuffle_t 1963 ms
+[BENCH] join 1539 ms
+[BENCH] shuffle_l 1051 ms
+[BENCH] shuffle_r 792 ms
+[BENCH] shuffle_t 1844 ms
+[BENCH] join 1553 ms
+[BENCH] shuffle_l 988 ms
+[BENCH] shuffle_r 926 ms
+[BENCH] shuffle_t 1914 ms
+[BENCH] join 1559 ms
+[BENCH] shuffle_l 979 ms
+[BENCH] shuffle_r 693 ms
+[BENCH] shuffle_t 1672 ms
+[BENCH] join 1565 ms
+[BENCH] shuffle_l 881 ms
+[BENCH] shuffle_r 900 ms
+[BENCH] shuffle_t 1781 ms
+[BENCH] join 1493 ms
+[BENCH] shuffle_l 930 ms
+[BENCH] shuffle_r 1294 ms
+[BENCH] shuffle_t 2225 ms
+[BENCH] join 1555 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 64 done!
+join.py rows 5000000 world_size 128 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 128 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c gloo -u 0.9 --weak
+[BENCH] shuffle_l 1442 ms
+[BENCH] shuffle_r 1339 ms
+[BENCH] shuffle_t 2782 ms
+[BENCH] join 1514 ms
+[BENCH] shuffle_l 2147 ms
+[BENCH] shuffle_r 767 ms
+[BENCH] shuffle_t 2915 ms
+[BENCH] join 1515 ms
+[BENCH] shuffle_l 1031 ms
+[BENCH] shuffle_r 1855 ms
+[BENCH] shuffle_t 2887 ms
+[BENCH] join 1567 ms
+[BENCH] shuffle_l 1032 ms
+[BENCH] shuffle_r 1630 ms
+[BENCH] shuffle_t 2663 ms
+[BENCH] join 1575 ms
+[BENCH] shuffle_l 1619 ms
+[BENCH] shuffle_r 975 ms
+[BENCH] shuffle_t 2595 ms
+[BENCH] join 1563 ms
+[BENCH] shuffle_l 1223 ms
+[BENCH] shuffle_r 2535 ms
+[BENCH] shuffle_t 3759 ms
+[BENCH] join 1589 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 128 done!
+join.py rows 5000000 world_size 256 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 256 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c gloo -u 0.9 --weak
+[BENCH] shuffle_l 1870 ms
+[BENCH] shuffle_r 3096 ms
+[BENCH] shuffle_t 4966 ms
+[BENCH] join 1554 ms
+[BENCH] shuffle_l 2864 ms
+[BENCH] shuffle_r 1850 ms
+[BENCH] shuffle_t 4714 ms
+[BENCH] join 1629 ms
+[BENCH] shuffle_l 2353 ms
+[BENCH] shuffle_r 1988 ms
+[BENCH] shuffle_t 4341 ms
+[BENCH] join 1565 ms
+[BENCH] shuffle_l 1577 ms
+[BENCH] shuffle_r 2334 ms
+[BENCH] shuffle_t 3912 ms
+[BENCH] join 1592 ms
+[BENCH] shuffle_l 1966 ms
+[BENCH] shuffle_r 1949 ms
+[BENCH] shuffle_t 3915 ms
+[BENCH] join 1588 ms
+[BENCH] shuffle_l 2532 ms
+[BENCH] shuffle_r 1613 ms
+[BENCH] shuffle_t 4145 ms
+[BENCH] join 1595 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 256 done!
+join.py rows 5000000 world_size 512 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 512 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c gloo -u 0.9 --weak
+[BENCH] shuffle_l 3807 ms
+[BENCH] shuffle_r 6356 ms
+[BENCH] shuffle_t 10164 ms
+[BENCH] join 1858 ms
+[BENCH] shuffle_l 3517 ms
+[BENCH] shuffle_r 5304 ms
+[BENCH] shuffle_t 8821 ms
+[BENCH] join 1878 ms
+[BENCH] shuffle_l 4215 ms
+[BENCH] shuffle_r 6209 ms
+[BENCH] shuffle_t 10425 ms
+[BENCH] join 1818 ms
+[BENCH] shuffle_l 7556 ms
+[BENCH] shuffle_r 5737 ms
+[BENCH] shuffle_t 13294 ms
+[BENCH] join 1883 ms
+[BENCH] shuffle_l 3242 ms
+[BENCH] shuffle_r 5283 ms
+[BENCH] shuffle_t 8526 ms
+[BENCH] join 1943 ms
+[BENCH] shuffle_l 5087 ms
+[BENCH] shuffle_r 3235 ms
+[BENCH] shuffle_t 8323 ms
+[BENCH] join 1889 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['gloo'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'gloo', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 512 done!
+join.py done!
+ ====================================== 
+
+args:  {'script': ['join.py'], 'rows': [5], 'world': [32, 64, 128, 256, 512], 'it': 6, 'sargs': '-a sort -c ucx -u 0.9', 'weak': True}
+join.py rows 5000000 world_size 32 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 32 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c ucx -u 0.9 --weak
+[BENCH] shuffle_l 175 ms
+[BENCH] shuffle_r 156 ms
+[BENCH] shuffle_t 332 ms
+[BENCH] join 1465 ms
+[BENCH] shuffle_l 132 ms
+[BENCH] shuffle_r 131 ms
+[BENCH] shuffle_t 264 ms
+[BENCH] join 1469 ms
+[BENCH] shuffle_l 131 ms
+[BENCH] shuffle_r 131 ms
+[BENCH] shuffle_t 263 ms
+[BENCH] join 1475 ms
+[BENCH] shuffle_l 134 ms
+[BENCH] shuffle_r 135 ms
+[BENCH] shuffle_t 269 ms
+[BENCH] join 1467 ms
+[BENCH] shuffle_l 155 ms
+[BENCH] shuffle_r 193 ms
+[BENCH] shuffle_t 348 ms
+[BENCH] join 1459 ms
+[BENCH] shuffle_l 137 ms
+[BENCH] shuffle_r 175 ms
+[BENCH] shuffle_t 313 ms
+[BENCH] join 1488 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['ucx'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'ucx', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 32 done!
+join.py rows 5000000 world_size 64 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 64 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c ucx -u 0.9 --weak
+[BENCH] shuffle_l 288 ms
+[BENCH] shuffle_r 270 ms
+[BENCH] shuffle_t 558 ms
+[BENCH] join 1455 ms
+[BENCH] shuffle_l 262 ms
+[BENCH] shuffle_r 254 ms
+[BENCH] shuffle_t 516 ms
+[BENCH] join 1512 ms
+[BENCH] shuffle_l 259 ms
+[BENCH] shuffle_r 255 ms
+[BENCH] shuffle_t 515 ms
+[BENCH] join 1483 ms
+[BENCH] shuffle_l 257 ms
+[BENCH] shuffle_r 254 ms
+[BENCH] shuffle_t 511 ms
+[BENCH] join 1515 ms
+[BENCH] shuffle_l 258 ms
+[BENCH] shuffle_r 262 ms
+[BENCH] shuffle_t 521 ms
+[BENCH] join 1498 ms
+[BENCH] shuffle_l 260 ms
+[BENCH] shuffle_r 256 ms
+[BENCH] shuffle_t 517 ms
+[BENCH] join 1505 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['ucx'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'ucx', 'algo': 'sort'}
+
+join.py rows 5000000 world_size 64 done!
+join.py rows 5000000 world_size 128 starting!
+running mpirun --map-by node --mca btl "vader,tcp,openib,self" --mca btl_tcp_if_include enp175s0f0 --mca btl_openib_allow_ib 1 --hostfile nodes.txt --bind-to core --bind-to socket --mca mpi_preconnect_mpi 1 -np 128 /N/u/d/dnperera/.conda/envs/cylonflow/bin/python /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/join.py -r 5000000 -i 6 -o /N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results -a sort -c ucx -u 0.9 --weak
+
+
+128
+[BENCH] shuffle_l 1249 ms
+[BENCH] shuffle_r 258 ms
+[BENCH] shuffle_t 1508 ms
+[BENCH] join 1515 ms
+[v-001:275242] 127 more processes have sent help message help-opal-runtime.txt / opal_init:warn-fork
+[v-001:275242] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[BENCH] shuffle_l 390 ms
+[BENCH] shuffle_r 401 ms
+[BENCH] shuffle_t 792 ms
+[BENCH] join 1562 ms
+[BENCH] shuffle_l 406 ms
+[BENCH] shuffle_r 411 ms
+[BENCH] shuffle_t 817 ms
+[BENCH] join 1564 ms
+[BENCH] shuffle_l 414 ms
+[BENCH] shuffle_r 427 ms
+[BENCH] shuffle_t 842 ms
+[BENCH] join 1571 ms
+[BENCH] shuffle_l 418 ms
+[BENCH] shuffle_r 456 ms
+[BENCH] shuffle_t 874 ms
+[BENCH] join 1572 ms
+[BENCH] shuffle_l 438 ms
+[BENCH] shuffle_r 418 ms
+[BENCH] shuffle_t 856 ms
+[BENCH] join 1563 ms
+
+
+[BENCH] shuffle_l 3001 ms
+[BENCH] shuffle_r 5211 ms
+[BENCH] shuffle_t 8213 ms
+[BENCH] join 1551 ms
+[BENCH] shuffle_l 768 ms
+[BENCH] shuffle_r 883 ms
+[BENCH] shuffle_t 1652 ms
+[BENCH] join 1567 ms
+[BENCH] shuffle_l 821 ms
+[BENCH] shuffle_r 926 ms
+[BENCH] shuffle_t 1747 ms
+[BENCH] join 1603 ms
+[BENCH] shuffle_l 837 ms
+[BENCH] shuffle_r 952 ms
+[BENCH] shuffle_t 1789 ms
+[BENCH] join 1562 ms
+[BENCH] shuffle_l 912 ms
+[BENCH] shuffle_r 936 ms
+[BENCH] shuffle_t 1848 ms
+[BENCH] join 1605 ms
+[BENCH] shuffle_l 915 ms
+[BENCH] shuffle_r 916 ms
+[BENCH] shuffle_t 1831 ms
+[BENCH] join 1621 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['ucx'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'ucx', 'algo': 'so
+rt'}
+[BENCH] shuffle_l 5373 ms
+[BENCH] shuffle_r 1686 ms
+[BENCH] shuffle_t 7060 ms
+[BENCH] join 2019 ms
+[BENCH] shuffle_l 2002 ms
+[BENCH] shuffle_r 2239 ms
+[BENCH] shuffle_t 4242 ms
+[BENCH] join 1976 ms
+[BENCH] shuffle_l 2309 ms
+[BENCH] shuffle_r 2402 ms
+[BENCH] shuffle_t 4711 ms
+[BENCH] join 1942 ms
+[BENCH] shuffle_l 2408 ms
+[BENCH] shuffle_r 2327 ms
+[BENCH] shuffle_t 4736 ms
+[BENCH] join 1910 ms
+[BENCH] shuffle_l 2386 ms
+[BENCH] shuffle_r 2376 ms
+[BENCH] shuffle_t 4763 ms
+[BENCH] join 1957 ms
+[BENCH] shuffle_l 2407 ms
+[BENCH] shuffle_r 2444 ms
+[BENCH] shuffle_t 4852 ms
+[BENCH] join 1998 ms
+join DONE! {'rows': 5000000, 'it': 6, 'out': '/N/u2/d/dnperera/victor/git/cylon_experiments/cylon/results', 'unique': 0.9, 'comms': ['ucx'], 'cols': 2, 'weak': True, 'algos': ['sort'], 'comm': 'ucx', 'algo': 'sort'}
